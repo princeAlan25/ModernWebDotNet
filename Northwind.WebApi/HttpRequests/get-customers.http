@@ -1,0 +1,9 @@
+### Configure a variable for the web service base address.
+@base_address = https://localhost:7027/customers/MORGK
+
+### Make a GET request to the base address.
+GET {{base_address}}
+
+###Delete MORGK
+DELETE {{base_address}}
+

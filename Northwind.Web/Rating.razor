@@ -1,0 +1,24 @@
+﻿<div>
+    @for(int i = 0; i < Maximum; i++)
+    {
+        if (i < Value)
+        {
+            <span class="oi oi-star-filled" />
+        }
+        else
+        {
+            <span class="oi oi-star-empty" />
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public byte Maximum { get; set; }
+    [Parameter]
+    public byte Value { get; set; }
+}
+
+<h1>Review</h1>
+<Rating id="rating" Maximum="5" Value="3" />
+<textarea id="comment" />

@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="Northwind.Blazor.Services/Northwind.Blazor.Services.csproj" Id="cdacb171-bb94-46a9-af30-7e6d3a05647d" />
+  <Project Path="Northwind.Blazor/Northwind.Blazor.Client/Northwind.Blazor.Client.csproj" />
+  <Project Path="Northwind.Blazor/Northwind.Blazor/Northwind.Blazor.csproj" />
+  <Project Path="Northwind.DataContext.Sqlite/Northwind.DataContext.Sqlite.csproj" />
+  <Project Path="Northwind.EntityModels.Sqlite/Northwind.EntityModels.Sqlite.csproj" />
+  <Project Path="Northwind.UnitTests/Northwind.UnitTests.csproj" />
+  <Project Path="Northwind.Web/Northwind.Web.csproj" />
+  <Project Path="Northwind.WebApi.WasmClient/Northwind.WebApi.WasmClient.csproj" Id="9af45755-0832-47e0-a5c6-b88027204381" />
+  <Project Path="Northwind.WebApi/Northwind.WebApi.csproj" Id="17e87d24-8418-4240-9244-ca7d27749957" />
+</Solution>

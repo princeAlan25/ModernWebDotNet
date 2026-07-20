@@ -1,0 +1,25 @@
+﻿@rendermode RenderMode.InteractiveServer
+@page "/editcustomer/{customerId}"
+@inject INorthwindService _service
+@inject NavigationManager navigation
+
+<h3>Update Customer</h3>
+<CustomerDetail Customer="customer" ButtonText="Update" OnValidSubmit="Update" />
+
+@code {
+    public Customer? customer { get; set; }
+    [Parameter]
+    public string? customerId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        customer = await _service.GetCustomerAsync(customerId);
+    }
+
+    private async Task Update()
+    {
+        if (customer is not null) await _service.UpdateCustomerAsync(customer);
+        navigation.NavigateTo("customers");
+    }
+
+}

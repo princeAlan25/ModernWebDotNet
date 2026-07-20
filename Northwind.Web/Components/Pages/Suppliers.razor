@@ -1,0 +1,35 @@
+﻿@page "/suppliers"
+@inject NorthwindContext _db
+
+ <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Company Name</th>
+        <th>Country</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+    @if (Companies is not null || Companies?.Count() > 0)
+    {
+      @foreach(Supplier s in Companies)
+      {
+        <tr>
+          <td>@s.CompanyName</td>
+          <td>@s.Country</td>
+          <td>@s.Phone</td>
+        </tr>
+      }
+    }
+    </tbody>
+  </table>
+
+
+@code {
+    public IEnumerable<Supplier>? Companies { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Companies = _db.Suppliers.OrderBy(c => c.Country).ThenBy(c => c.CompanyName);
+    }
+}
